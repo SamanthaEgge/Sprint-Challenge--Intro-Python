@@ -32,11 +32,10 @@ def cityreader(cities=[]):
     return cities
 
 cityreader(cities)
-print(cities)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
 for c in cities:
-    print(c)
+    print(c[0], c[3], c[4], sep=',')
 
 # STRETCH GOAL!
 #
