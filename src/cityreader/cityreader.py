@@ -30,7 +30,7 @@ def cityreader(cities=[]):
     reader = csv.reader(cityfile)
     next(reader)
     for row in reader:
-      newcity = City(row[0], row[3], row[4])
+      newcity = City(row[0], float(row[3]), float(row[4]))
       cities.append(newcity)
     
     
@@ -40,7 +40,7 @@ cityreader(cities)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
 for c in cities:
-    print(c.name, float(c.lat), float(c.lon), sep=',')
+    print(c.name, c.lat, c.lon, sep=',')
 
 # STRETCH GOAL!
 #
